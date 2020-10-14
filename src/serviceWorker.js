@@ -12,7 +12,7 @@
 /* eslint-disable */
 
 'use strict';
-var self = this;
+// var self = this;
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
     // [::1] is the IPv6 localhost address.
@@ -149,21 +149,21 @@ const CACHE_NAME = 'static-cache-v1';
 // CODELAB: Add list of files to cache here.
 const FILES_TO_CACHE = [
 ];
-
+/* eslint-disable-next-line no-restricted-globals */
 self.addEventListener('install', (evt) => {
   console.log('[ServiceWorker] Install');
   // CODELAB: Precache static resources here.
 
   self.skipWaiting();
 });
-
+/* eslint-disable-next-line no-restricted-globals */
 self.addEventListener('activate', (evt) => {
   console.log('[ServiceWorker] Activate');
   // CODELAB: Remove previous cached data from disk.
 
   self.clients.claim();
 });
-
+/* eslint-disable-next-line no-restricted-globals */
 self.addEventListener('fetch', (evt) => {
   console.log('[ServiceWorker] Fetch', evt.request.url);
   // CODELAB: Add fetch event handler here.
