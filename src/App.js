@@ -7,6 +7,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <button id="butInstall" aria-label="Install" hidden></button>
+        <button id="butRefresh" aria-label="Refresh"></button>
         <p>
           This is my first test
         </p>
